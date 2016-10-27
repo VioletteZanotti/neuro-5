@@ -49,7 +49,8 @@ class Neuron {
     double ext_f_; ///>external frequency
     
     double t_;
-    std::priority_queue <Event> events_in_;
+    std::priority_queue <Event> events_in_; /* Ce serait plus simple d'avoir une seule queue d'event pour chaque neuron
+    et de faire appel à la queue des neurones suivants lors d'un spike*/
     std::priority_queue <Event> events_out_;
     std::vector <Neuron*> synapses_;
     
